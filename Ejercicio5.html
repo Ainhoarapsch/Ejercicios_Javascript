@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <!-- jQuery (host Google) -->
+  <script src="cambiarColor.js"></script>
+  <!-- La función a realizar -->
+    <style>
+body {
+  font-family: Helvetica, Arial;
+  margin: 0;
+  /* Transition para el cambio de color */
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
+}
+
+form {
+  margin: 20px 0 0 0;
+  text-align: center;
+}
+
+header {
+  background: #222;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, .3);
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 12px 0;
+  text-align: center;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, .3);
+  text-transform: uppercase;
+}
+
+input[type="button"] {
+  font-size: 20px;
+  font-weight: bold;
+  padding: 12px;
+  text-transform: uppercase;
+}
+     </style>
+     <script>
+        $(document).ready(function() { /* Cualquier funcionalidad que queramos agregar a la página por medio de jQuery, debe ser incluida cuando el documento está listo para recibir acciones que modifiquen el DOM de la página. */
+  $('.azul').click(function(event) { /* Seleccionamos el elemento que queremos que realice la función */
+    $('body').css('background', '#08c'); /* La función a realizar añadir CSS al body previamente seleccionado */
+  });
+  $('.blanco').click(function(event) { /* Seleccionamos el elemento que queremos que realice la función */
+    $('body').css('background', '#fff'); /* La función a realizar añadir CSS al body previamente seleccionado */
+  });
+});
+     </script>
+</head>
+<body>
+    <header>Elige un color</header>
+    <form>
+      <input type="button" value="Azul" class="azul">
+      <input type="button" value="Blanco" class="blanco">
+    </form>
+</body>
+</html>
