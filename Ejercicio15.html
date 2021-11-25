@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 15</title>
+    <script>
+        function genera_tabla() {
+  var body = document.getElementsByTagName("body")[0];
+  var tabla   = document.createElement("table");
+  var tblBody = document.createElement("tbody");
+  for (var i = 0; i < 2; i++) {
+    var hilera = document.createElement("tr");
+
+    for (var j = 0; j < 2; j++) {
+      var celda = document.createElement("td");
+      var textoCelda = document.createTextNode("celda  "+i+", columna "+j);
+      celda.appendChild(textoCelda);
+      hilera.appendChild(celda);
+    }
+    tblBody.appendChild(hilera);
+  }
+  tabla.appendChild(tblBody);
+  body.appendChild(tabla);
+  tabla.setAttribute("border", "2");
+}
+    </script>
+</head>
+<body>
+    <input type="button" value="Genera una tabla" onclick="genera_tabla()">
+</body>
+</html>
