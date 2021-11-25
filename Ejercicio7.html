@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 7</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  </head>
+  <body>
+    <button type="button" id="button">Botón</button>
+    <button type="button" id="show">Mostrar botón </button>
+    <button type="button" id="hide">Ocultar botón</button>
+    <script>
+      $(function(){
+        $('#show').click(function(){
+          $('#button').show();
+        });
+        $('#hide').click(function(){
+          $('#button').hide();
+        });
+      })
+    </script>
+  </body>
+</html>
